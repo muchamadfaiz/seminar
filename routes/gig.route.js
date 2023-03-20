@@ -4,7 +4,7 @@ import {
     getGigs,
     getGig,
     deleteGig
-} from "../controllers"
+} from "../controllers/gig.controller.js"
 
 const router = express.Router();
 

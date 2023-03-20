@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 const { Schema, model } = mongoose;
 
-const gigSchema = new Schema({
+const gigSchema = Schema({
   userID:{
     type:Number,
     required:true,

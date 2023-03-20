@@ -1,11 +1,12 @@
 import mongoose from 'mongoose';
 const { Schema, model } = mongoose;
 
-const userSchema = new Schema({
+const userSchema = Schema({
   username: {
     type: String,
+    minlength: [3, 'min username 3 character'],
+    maxlength: [20, 'min username 3 character'],
     required: [true, "username harus diisi"],
-    unique: true,
   },
   email: {
     type: String,
@@ -15,7 +16,7 @@ const userSchema = new Schema({
   password: {
     type: String,
     required: [true, 'Please enter a valid password'],
-    minlength: [6, 'Minimum password length must be 6 characters'],
+    // minlength: [6, 'Minimum password length must be 6 characters'],
   },
 },
   { timestamps: true }
